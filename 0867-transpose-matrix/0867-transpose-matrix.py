@@ -1,4 +1,7 @@
 class Solution:
     def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
-        m, n = len(matrix), len(matrix[0])
-        return [[matrix[r][c] for r in range(m)] for c in range(n)]
+        a=[[0]*len(matrix) for a in range(len(matrix[0]))]
+        for i in range(len(matrix)):
+            for j in range(len(matrix[i])):
+                a[j][i]=matrix[i][j]
+        return a
